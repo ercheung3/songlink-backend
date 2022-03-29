@@ -1,14 +1,14 @@
-const Item = require("../models/item");
+const Song = require("../models/song");
 const express = require("express");
 const router = express();
 
 //INDEX ROUTE
 router.get("/", async (req, res) => {
   try {
-    const items = await Item.find();
+    const songs = await Song.find();
     res.send({
       success: true,
-      data: items,
+      data: songs,
     });
   } catch (err) {
     res.send({
@@ -21,10 +21,10 @@ router.get("/", async (req, res) => {
 //CREATE ROUTE
 router.post("/", async (req, res) => {
   try {
-    const newItem = await Item.create(req.body);
+    const newSong = await Song.create(req.body);
     res.send({
       success: true,
-      data: newItem,
+      data: newSong,
     });
   } catch (err) {
     res.send({
@@ -37,13 +37,13 @@ router.post("/", async (req, res) => {
 //SHOW ROUTE
 router.get("/:id", async (req, res) => {
   try {
-    const item = await Item.findById(req.params.id);
+    const song = await Song.findById(req.params.id);
     if (!item) {
-      throw new Error("No Item Here!");
+      throw new Error("No Song Here!");
     }
     res.send({
       success: true,
-      data: item,
+      data: song,
     });
   } catch (err) {
     res.send({
@@ -57,10 +57,10 @@ router.get("/:id", async (req, res) => {
 //DELETE ROUTE
 router.delete("/:id", async (req, res) => {
   try {
-    const item = await Item.findByIdAndDelete(req.params.id);
+    const song = await Song.findByIdAndDelete(req.params.id);
     res.send({
       success: true,
-      data: item,
+      data: song,
     });
   } catch (err) {
     res.send({
@@ -74,12 +74,12 @@ router.delete("/:id", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     //{new: true} is an option to return modified document rather than original
-    const item = await Item.findByIdAndUpdate(req.params.id, req.body, {
+    const song = await Song.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
     res.send({
       success: true,
-      data: item,
+      data: song,
     });
   } catch (err) {
     res.send({

@@ -1,7 +1,7 @@
 const express = require("express");
 const methodOverride = require("method-override");
 const session = require("express-session");
-const Item = require("./models/item");
+const Song = require("./models/song");
 const MongoDBStore = require("connect-mongodb-session")(session);
 require("dotenv").config();
 const app = express();
@@ -22,7 +22,7 @@ const store = new MongoDBStore({
 
 require("./db-utils/connect");
 
-const itemController = require("./controllers/itemController");
+const songController = require("./controllers/songController");
 
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
@@ -39,7 +39,7 @@ app.use(
   })
 );
 
-app.use("/items", itemController);
+app.use("/songs", songController);
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
