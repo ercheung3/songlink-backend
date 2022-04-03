@@ -3,13 +3,13 @@ const Schema = mongoose.Schema;
 
 const songSchema = new Schema(
   {
-    title: { String, required: true },
-    artist: { String, required: true },
+    title: { type: String, required: true },
+    artist: { type: String, required: true },
     albumTitle: String,
     albumArt: String,
     genre: String,
     media: String,
-    isPlayable: { Boolean, default: false },
+    isPlayable: { type: Boolean, default: false },
     preview: String,
     //Add users
   },
