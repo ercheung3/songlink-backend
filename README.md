@@ -1,7 +1,7 @@
 # Songlink App
 
-I have always wanted to share my music taste with the world and now you can share yours as well.
-**Created By: _ Eric Cheung_**
+I have always wanted to share my music taste with the world and now you can share yours as well.\
+**Created By: Eric Cheung**
 
 ## Hosted App Link
 
