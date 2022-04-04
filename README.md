@@ -5,12 +5,12 @@ I have always wanted to share my music taste with the world and now you can shar
 
 ## Hosted App Link
 
-[Songlink App via Heroku](https://songlink-frontend.herokuapp.com/)
+[Songlink App via Heroku](https://songlink-frontend.herokuapp.com/)\
 [Songlink Backend via Heroku](https://songlink-backend.herokuapp.com/)
 
-## Preview of Eventpalooza
+## Preview of Songlink
 
-[Screenshot preview of Eventpalooze](https://imgur.com/a/tJ8gvBa)
+![Imgur](https://i.imgur.com/MdJa4Q1.png)
 
 ## Technology Used
 
@@ -83,5 +83,5 @@ Songs
 
 ## Github Repo
 
-[Songlink Frontend](https://github.com/ercheung3/songlink-frontend)
+[Songlink Frontend](https://github.com/ercheung3/songlink-frontend)\
 [Songlink Backend](https://github.com/ercheung3/songlink-backend)
